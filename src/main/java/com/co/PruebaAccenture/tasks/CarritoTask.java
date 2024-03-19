@@ -1,11 +1,9 @@
 package com.co.PruebaAccenture.tasks;
 
 import com.co.PruebaAccenture.models.CarritoData;
-import com.co.PruebaAccenture.models.RegistroData;
 import com.co.PruebaAccenture.ui.CarritoUi;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;

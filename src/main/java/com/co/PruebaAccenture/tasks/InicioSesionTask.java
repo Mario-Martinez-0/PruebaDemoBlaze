@@ -1,7 +1,6 @@
 package com.co.PruebaAccenture.tasks;
 
 import com.co.PruebaAccenture.models.InicioData;
-import com.co.PruebaAccenture.models.RegistroData;
 import com.co.PruebaAccenture.ui.InicioSesionUi;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
@@ -16,7 +15,7 @@ public class InicioSesionTask implements Task {
         this.inicioData = inicioData;
     }
 
-    public static InicioSesionTask inicio (InicioData inicioData) {
+    public static InicioSesionTask inicio(InicioData inicioData) {
         return Instrumented.instanceOf(InicioSesionTask.class).withProperties(inicioData);
     }
 

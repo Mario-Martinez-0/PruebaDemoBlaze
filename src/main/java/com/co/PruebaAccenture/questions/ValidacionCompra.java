@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.Question;
 public class ValidacionCompra implements Question<Boolean> {
 
     public static ValidarRegistro ValidacionCompra() {
-        return new  ValidarRegistro();
+        return new ValidarRegistro();
     }
 
     @Override

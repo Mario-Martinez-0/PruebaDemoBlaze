@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">0</div>
+<div class="counter">1</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">1m3.33s</div>
+<div class="counter">1m12.56s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
-<div class="percent">100%</div>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,13 +61,37 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Tests</a>
+<a href="#tab0">Failed tests</a>
 </li>
 <li>
-<a href="#tab1">Standard error</a>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Registro de un nuevo usuario"></a>
+<h3 class="failures">Registro de un nuevo usuario</h3>
+<span class="code">
+<pre>java.lang.AssertionError: Build info: version: '4.14.1', revision: '03f8ede370'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [b6a3905e-70c9-4199-afe4-40cd1fe318bc, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: firefox, browserVersion: 124.0, goog:chromeOptions: {args: [start-maximized, incognito, test-type, no-sandbox, lang=es, disable-popup-blocking, disable-download-notification, ignore-certificate-errors, allow-running-insecure-content, disable-translate, always-authorize-plugins, disable-extensions, remote-allow-origins=*, disable-notifications, lang=en]}, moz:accessibilityChecks: false, moz:buildID: 20240311145044, moz:debuggerAddress: 127.0.0.1:22156, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 13948, moz:profile: C:\Users\Mario\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:22156/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b6a3905e-70c9-4199-afe4-40cd1fe318bc
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at com.co.PruebaAccenture.stepsDefinitions.StepsDefinitionsDemoBlaze.deberíaEstarRegistradoExitosamenteEnProductStore(StepsDefinitionsDemoBlaze.java:45)
+	at ✽.debería estar registrado exitosamente en Product Store &quot;Sign up successful.&quot;(file:///C:/Users/Mario/Desktop/estudio%20programacion/Accenture/PruebaAccenture/src/test/resources/features/demoblaze.feature:17)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -79,17 +103,17 @@
 </thead>
 <tr>
 <td class="success">Realizar una compra agregando productos al carrito</td>
-<td class="success">34.562s</td>
+<td class="success">41.686s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">Registro de un nuevo usuario</td>
-<td class="success">28.770s</td>
-<td class="success">passed</td>
+<td class="failures">Registro de un nuevo usuario</td>
+<td class="failures">30.871s</td>
+<td class="failures">failed</td>
 </tr>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
 <pre>[Test worker] INFO  - 
@@ -100,14 +124,16 @@
 
 Registro de un nuevo usuario(realizar-el-registro-de-un-nuevo-usuario-y-realizar-una-compra-en-product-store;registro-de-un-nuevo-usuario)
 --------------------------------------------------------------------------------
-[Test worker] INFO  - 
-  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
- |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
-   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
-   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+[Test worker] ERROR  - 
+  _____   ___   ___   _____     ___   ___   ___    ___    ___ 
+ |_   _| | __| / __| |_   _|   | __| | _ \ | _ \  / _ \  | _ \
+   | |   | _|  \__ \   | |     | _|  |   / |   / | (_) | |   /
+   |_|   |___| |___/   |_|     |___| |_|_\ |_|_\  \___/  |_|_\
 
 Registro de un nuevo usuario
-----------------------------------------------------------------------
+---------------------------------------------------------------
+[Test worker] ERROR  -     Test failed at step: 1: Registro de un nuevo usuario ({usuario=CamiloJose02, clave=112345, mensaje=Sign up successful.})
+[Test worker] ERROR  -     Build info: version: '4.14.1', revision: '03f8ede370'
 [Test worker] INFO  - 
   _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
  |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
@@ -135,7 +161,7 @@ Realizar una compra agregando productos al carrito
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.0</a> at 19 mar. 2024 11:41:27</p>
+<a href="http://www.gradle.org">Gradle 8.0</a> at 19 mar. 2024 12:49:12</p>
 </div>
 </div>
 </body>

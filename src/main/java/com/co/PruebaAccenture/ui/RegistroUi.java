@@ -3,7 +3,6 @@ package com.co.PruebaAccenture.ui;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.findby.By;
 
-
 public class RegistroUi {
     public static final Target OPCION_REGISTRO = Target.the("Opcion del menu para registrase").
             located(By.id("signin2"));
@@ -13,6 +12,5 @@ public class RegistroUi {
             located(By.id("sign-password"));
     public static final Target BTN_REGISTROUSUARIO = Target.the("button de registrar usuario").
             located(By.xpath("(//button[@class='btn btn-primary'])[2]"));
-
 
 }

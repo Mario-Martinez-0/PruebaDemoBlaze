@@ -18,7 +18,7 @@ Característica: Realizar el registro de un nuevo usuario y realizar una compra 
 
     Ejemplos:
       | usuario      | clave  | mensaje             |
-      | CamiloJose01 | 112345 | Sign up successful. |
+      | CamiloJose02 | 112345 | Sign up successful. |
 
   @Regresion
   Esquema del escenario: Realizar una compra agregando productos al carrito
@@ -34,4 +34,4 @@ Característica: Realizar el registro de un nuevo usuario y realizar una compra 
 
     Ejemplos:
       | usuario      | clave  | categoria | producto | nombre     | pais     | ciudad   | tarjeta             | mes | ano  |
-      | CamiloJose01 | 112345 | Phones    | Samsung  | Juan Perez | Colombia | Medellin | 1234 5678 9012 3456 | 12  | 2023 |
+      | CamiloJose02 | 112345 | Phones    | Samsung  | Juan Perez | Colombia | Medellin | 1234 5678 9012 3456 | 12  | 2023 |

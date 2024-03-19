@@ -13,13 +13,10 @@ import com.co.PruebaAccenture.tasks.RegistroTask;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.Before;
 import io.cucumber.java.es.*;
-import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import org.hamcrest.Matchers;
-import org.openqa.selenium.WebDriver;
 
 import java.io.IOException;
 
@@ -72,10 +69,9 @@ public class StepsDefinitionsDemoBlaze {
                 GivenWhenThen.seeThat("La compra se valida correctamente",
                         ValidacionCompra.ValidacionCompra())
         );
-        /*OnStage.theActorInTheSpotlight().should(
-                GivenWhenThen.seeThat(ValidacionCompra.ValidacionCompra())
-        );*/
+
     }
+
     @Before
     public void matarNavegador() throws IOException, InterruptedException {
         processes("chromedriver");

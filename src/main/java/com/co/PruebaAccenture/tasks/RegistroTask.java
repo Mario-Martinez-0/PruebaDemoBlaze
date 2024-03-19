@@ -10,15 +10,15 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 public class RegistroTask implements Task {
 
-        private final RegistroData registroData;
+    private final RegistroData registroData;
 
     public RegistroTask(RegistroData registroData) {
         this.registroData = registroData;
     }
 
     public static RegistroTask registrar(RegistroData registroData) {
-            return Instrumented.instanceOf(RegistroTask.class).withProperties(registroData);
-        }
+        return Instrumented.instanceOf(RegistroTask.class).withProperties(registroData);
+    }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
@@ -27,7 +27,6 @@ public class RegistroTask implements Task {
                 Enter.theValue(registroData.getUsuario()).into(RegistroUi.TXT_NOMBREUSUARIO),
                 Enter.theValue(registroData.getClave()).into(RegistroUi.TXT_CLAVEUSUARIO),
                 Click.on(RegistroUi.BTN_REGISTROUSUARIO));
-
 
     }
 }

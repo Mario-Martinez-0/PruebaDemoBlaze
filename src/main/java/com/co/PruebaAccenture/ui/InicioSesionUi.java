@@ -10,6 +10,6 @@ public class InicioSesionUi {
             located(By.id("loginusername"));
     public static final Target TXT_CLAVEUSUARIO = Target.the("input del clave de usuario").
             located(By.id("loginpassword"));
-    public static final Target BTN_INICIO= Target.the("button de registrar usuario").
+    public static final Target BTN_INICIO = Target.the("button de registrar usuario").
             located(By.xpath("(//button[@class='btn btn-primary'])[3]"));
 }

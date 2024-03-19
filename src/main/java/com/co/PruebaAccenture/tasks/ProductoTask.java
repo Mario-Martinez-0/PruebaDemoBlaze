@@ -28,6 +28,10 @@ public class ProductoTask implements Task {
                 Click.on(ProductoUi.LINK_CATEGORIA.of(producto)),
                 Click.on(ProductoUi.BNT_AGREGAR),
                 Alerta.on(),
+                Click.on(ProductoUi.LINK_INICIO),
+                Click.on(ProductoUi.LINK_PROCDUTO),
+                Click.on(ProductoUi.BNT_AGREGAR),
+                Alerta.on(),
                 Click.on(ProductoUi.LINK_CARRITO)
         );
     }
